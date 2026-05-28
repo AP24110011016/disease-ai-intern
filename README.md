@@ -43,3 +43,24 @@ Summer Research Internship Project
 - Histograms show distributions
 - Scatter plots show relationships
 - Missing values are important in ML
+
+# Day 4 Progress
+## Topics Learned
+- Missing values
+- Duplicate handling
+- fillna()
+- drop_duplicates()
+- Sorting
+- value_counts()
+- Correlation
+- Heatmaps
+- Boxplots
+## Files Added
+- cleaning.py
+- notebooks/data_cleaning.ipynb
+## Key Learnings
+- Real datasets contain dirty data
+- Missing values require preprocessing
+- Correlation helps understand relationships
+- Heatmaps visualize correlations
+- Boxplots help detect outliers
