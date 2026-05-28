@@ -6,6 +6,7 @@ Summer Research Internship Project
 - Build disease prediction models
 - Develop adaptive AI systems
 - Publish a research paper
+
 # Day 2 Progress
 ## Topics Learned
 - pandas basics
@@ -15,7 +16,6 @@ Summer Research Internship Project
 - shape
 - dtypes
 - describe()
-
 ## Files Added
 - explore.py
 - data/students.csvgit add .
@@ -24,3 +24,22 @@ Summer Research Internship Project
 - CSV files store tabular datasets
 - DataFrames are table structures
 - EDA means Exploratory Data Analysis
+
+# Day 3 Progress
+## Topics Learned
+- head()
+- tail()
+- info()
+- missing values
+- filtering
+- histograms
+- scatter plots
+- matplotlib basics
+## Files Added
+- visualize.py
+- notebooks/visualization_basics.ipynb
+## Key Learnings
+- Visualization helps understand patterns
+- Histograms show distributions
+- Scatter plots show relationships
+- Missing values are important in ML
