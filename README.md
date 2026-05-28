@@ -64,3 +64,23 @@ Summer Research Internship Project
 - Correlation helps understand relationships
 - Heatmaps visualize correlations
 - Boxplots help detect outliers
+
+# Day 5 Progress
+## Topics Learned
+- Machine Learning basics
+- Features and target variables
+- Classification
+- Train-test split
+- Logistic Regression
+- Model training
+- Predictions
+- Accuracy
+## Files Added
+- ml_model.py
+- notebooks/ml_basics.ipynb
+## Key Learnings
+- ML models learn patterns from data
+- Features are inputs to the model
+- Target is the prediction output
+- Logistic Regression is used for classification
+- Accuracy measures model performance
