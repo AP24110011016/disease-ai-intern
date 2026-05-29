@@ -38,6 +38,46 @@ Summer Research Internship Project
 ## Files Added
 - visualize.py
 - notebooks/visualization_basics.ipynb
+# Pima Diabetes Dataset EDA
+## Dataset Used
+Pima Indians Diabetes Dataset
+## Topics Learned
+* Healthcare dataset analysis
+* Exploratory Data Analysis (EDA)
+* Histograms
+* Feature distributions
+* Class imbalance
+* Correlation heatmaps
+* Medical data visualization
+## Files Added
+* data/diabetes.csv
+* notebooks/eda.ipynb
+## Key Learnings
+* Understanding real-world medical datasets
+* Loading datasets using pandas
+* Visualizing feature distributions using histograms
+* Identifying class imbalance in healthcare datasets
+* Understanding relationships between medical features
+* Using seaborn heatmaps for correlation analysis
+## EDA Tasks Performed
+* Loaded diabetes dataset
+* Inspected dataset structure
+* Checked dataset shape and columns
+* Generated statistical summaries
+* Plotted histograms for all 8 features
+* Analyzed diabetes outcome imbalance
+* Created correlation heatmap
+* Visualized glucose distribution
+## Important Observation
+The dataset contains:
+* 500 non-diabetic patients
+* 268 diabetic patients
+This creates a class imbalance problem, which is important in machine learning model performance.
+## Technologies Used
+* pandas
+* matplotlib
+* seaborn
+* Jupyter Notebook
 ## Key Learnings
 - Visualization helps understand patterns
 - Histograms show distributions
