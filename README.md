@@ -90,3 +90,100 @@ This creates a class imbalance problem, which is important in machine learning m
 * Presenting research paper summaries
 * Demonstrating project progress to mentors
 * Maintaining clear project documentation
+
+# Day 6 Progress
+
+## Topics Learned
+* Feature Engineering
+* BMI Category Binning
+* Age Group Labeling
+* Glucose-to-Insulin Ratio
+* Correlation Analysis
+* Seaborn Heatmaps
+## Key Learnings
+* Feature engineering helps create more informative variables from existing data.
+* BMI values can be grouped into health-related categories.
+* Age groups help identify trends across different age ranges.
+* The glucose-to-insulin ratio captures the relationship between glucose and insulin levels.
+* Correlation analysis helps understand relationships between features.
+* Heatmaps provide a clear visualization of feature correlations.
+
+# Day 7 Progress
+
+## Topics Learned
+* Linear Regression
+* Cost Function
+* Gradient Descent
+* Model Training
+* NumPy Implementation
+* Cost vs Epochs Visualization
+## Files Added
+* regression_scratch.py
+## Key Learnings
+* Linear Regression is used to model relationships between variables.
+* NumPy can be used to implement machine learning algorithms from scratch.
+* The cost function measures prediction error during training.
+* Gradient Descent iteratively updates parameters to minimize cost.
+* Epochs represent complete passes through the training data.
+* Plotting cost vs epochs helps visualize model convergence.
+
+# Day 8 Progress
+
+## Topics Learned
+* Data Preprocessing Pipeline
+* Missing Value Imputation
+* Median Imputation
+* Min-Max Normalization
+* Train-Test Split
+* Stratified Sampling
+* Reproducibility
+## Files Added
+* pipeline.py
+## Key Learnings
+* Pipelines automate preprocessing steps.
+* Missing values can be handled using median imputation.
+* Min-Max normalization scales features between 0 and 1.
+* Stratified sampling preserves class distribution.
+* Fixed random seeds ensure reproducible experiments.
+
+# Day 9 Progress
+
+## Topics Learned
+* Logistic Regression
+* Binary Classification
+* Model Training
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* ROC-AUC
+## Files Added
+* logistic_regression.py
+* results/results_log.csv (added by code in logistic_regression.py)
+## Key Learnings
+* Logistic Regression is commonly used for binary classification tasks.
+* Accuracy measures overall prediction correctness.
+* Precision measures the quality of positive predictions.
+* Recall measures how many actual positives are identified.
+* F1-Score balances precision and recall.
+* ROC-AUC evaluates the model's ability to distinguish between classes.
+
+# Day 10 Progress
+
+## Topics Learned
+* Exploratory Data Analysis Reporting
+* Class Balance Analysis
+* Missing Value Handling
+* Feature Distribution Analysis
+* Insight Extraction
+* Git Tagging
+## Files Added
+* report_eda.md
+## Key Learnings
+* EDA findings should be documented clearly and concisely.
+* Class imbalance can affect model evaluation.
+* Median imputation is effective for handling missing values.
+* Feature distributions reveal important dataset characteristics.
+* Key insights help guide future model development.
+* Git tags can be used to mark project milestones.
+
