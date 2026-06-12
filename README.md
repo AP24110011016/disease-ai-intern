@@ -227,3 +227,39 @@ This creates a class imbalance problem, which is important in machine learning m
 * Ensemble learning reduces overfitting compared to a single Decision Tree.
 * Feature importance helps identify influential predictors.
 * Model comparison helps select the best baseline model.
+
+# Day 13 Progress
+
+## Topics Learned
+* Support Vector Machine (SVM)
+* RBF Kernel
+* Hyperparameter Tuning
+* GridSearchCV
+* Decision Boundary
+* Model Comparison
+## Files Added
+* svm_model.py
+## Key Learnings
+* SVM is a powerful classification algorithm for binary classification tasks.
+* The RBF kernel enables SVM to learn non-linear decision boundaries.
+* Hyperparameters C and gamma significantly affect model performance.
+* GridSearchCV helps identify optimal hyperparameter combinations.
+* Comparing multiple models helps select the most effective classifier.
+
+# Day 14 Progress
+
+## Topics Learned
+* Research Paper Review
+* Diabetes Subtype Classification
+* Random Forest in Healthcare
+* Gap Analysis
+* Personalized Medicine
+* Early Disease Detection
+## Files Added
+* gap_analysis.md
+## Key Learnings
+* Type 2 Diabetes can be divided into multiple clinical subtypes.
+* Machine learning can classify patients into disease subgroups using clinical features.
+* Random Forest models can achieve high predictive performance in healthcare applications.
+* Research papers should be evaluated for limitations and future improvement opportunities.
+* Gap analysis helps identify areas where new research can contribute.
