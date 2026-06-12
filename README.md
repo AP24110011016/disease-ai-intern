@@ -263,3 +263,44 @@ This creates a class imbalance problem, which is important in machine learning m
 * Random Forest models can achieve high predictive performance in healthcare applications.
 * Research papers should be evaluated for limitations and future improvement opportunities.
 * Gap analysis helps identify areas where new research can contribute.
+
+# Day 15 Progress
+
+## Topics Learned
+* Model Comparison
+* Baseline Model Selection
+* Performance Evaluation
+* Research Validation
+* Healthcare AI Model Assessment
+## Files Updated
+* results/results_log.csv
+* paper/comparison.md
+## Baseline Results
+
+| Model               | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
+| ------------------- | -------- | --------- | ------ | -------- | ------- |
+| Logistic Regression | 0.7078   | 0.6047    | 0.4815 | 0.5361   | 0.8067  |
+| Decision Tree       | 0.7987   | 0.7447    | 0.6481 | 0.6931   | 0.7921  |
+| Random Forest       | 0.7468   | 0.6531    | 0.5926 | 0.6214   | 0.8133  |
+| SVM                 | 0.7208   | 0.6341    | 0.4815 | 0.5474   | 0.7970  |
+
+## Mentor Demo Summary
+Presented the performance comparison of Logistic Regression, Decision Tree, Random Forest, and Support Vector Machine models on the diabetes prediction dataset.
+## Key Findings
+* Decision Tree achieved the highest Accuracy, Precision, Recall, and F1-Score.
+* Random Forest achieved the highest ROC-AUC score.
+* SVM performed moderately but did not outperform Decision Tree.
+* Logistic Regression served as the baseline classifier.
+## Strongest Baseline Model
+**Decision Tree**
+Performance:
+* Accuracy: 79.87%
+* Precision: 74.47%
+* Recall: 64.81%
+* F1-Score: 69.31%
+## Key Learnings
+* Multiple evaluation metrics are necessary for healthcare AI systems.
+* Accuracy alone is not sufficient for model selection.
+* Model comparison helps identify robust baseline models.
+* Research validation ensures alignment with project objectives.
+
