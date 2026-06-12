@@ -187,3 +187,43 @@ This creates a class imbalance problem, which is important in machine learning m
 * Key insights help guide future model development.
 * Git tags can be used to mark project milestones.
 
+# Day 11 Progress
+
+## Topics Learned
+* Decision Tree Classifier
+* GridSearchCV
+* Hyperparameter Tuning
+* Cross Validation
+* Confusion Matrix
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* ROC-AUC
+## Files Added
+* decision_tree.py
+* results/dt_confusion_matrix.png
+## Key Learnings
+* Decision Trees classify data using feature-based decision rules.
+* GridSearchCV helps find the best hyperparameter values automatically.
+* Cross-validation improves model evaluation reliability.
+* Confusion matrices help analyze classification errors.
+* Accuracy, Precision, Recall, F1-Score, and ROC-AUC are important evaluation metrics.
+* Hyperparameter tuning improved model performance.
+
+# Day 12 Progress
+
+## Topics Learned
+* Random Forest
+* Ensemble Learning
+* Feature Importance
+* GridSearchCV
+* Model Comparison
+## Files Added
+* random_forest.py
+* results/rf_feature_importance.png
+## Key Learnings
+* Random Forest combines multiple decision trees to improve performance.
+* Ensemble learning reduces overfitting compared to a single Decision Tree.
+* Feature importance helps identify influential predictors.
+* Model comparison helps select the best baseline model.
