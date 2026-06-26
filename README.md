@@ -304,3 +304,126 @@ Performance:
 * Model comparison helps identify robust baseline models.
 * Research validation ensures alignment with project objectives.
 
+# Day 16 Progress
+
+## Topics Learned
+* TensorFlow
+* Keras
+* Multi-Layer Perceptron (MLP)
+* Neural Networks
+* ReLU Activation
+* Sigmoid Activation
+* Adam Optimizer
+* Binary Cross-Entropy Loss
+
+## Files Added
+* mlp_model.py
+* results/mlp_results.csv
+* results/mlp_loss_curve.png
+## MLP Architecture
+Input → Dense(64, ReLU) → Dense(32, ReLU) → Dense(1, Sigmoid)
+## Training Configuration
+* Epochs: 50
+* Batch Size: 32
+* Optimizer: Adam
+* Loss Function: Binary Cross-Entropy
+## Results
+| Model | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
+|---------|---------|---------|---------|---------|---------|
+| MLP | 0.7338 | 0.6444 | 0.5370 | 0.5859 | 0.8357 |
+## Key Learnings
+* Built and trained an MLP using TensorFlow/Keras.
+* Used ReLU in hidden layers and Sigmoid for binary classification.
+* Trained the model for 50 epochs using Adam optimizer.
+* Generated training and validation loss curves.
+* Evaluated model performance using Accuracy, Precision, Recall, F1-Score, and ROC-AUC.
+
+# Day 17 Progress
+## Topics Learned
+* Model Comparison
+* Deep Learning vs Traditional Machine Learning
+## Files Updated
+* results/results_log.csv
+* README.md
+## Key Findings
+* Decision Tree achieved the highest Accuracy, Precision, Recall, and F1-Score.
+* MLP achieved the highest ROC-AUC score.
+* Random Forest provided balanced overall performance.
+* Logistic Regression served as the baseline classifier.
+* Comparing multiple models helped identify the strongest baseline for diabetes prediction.
+## Key Learnings
+* Multiple evaluation metrics are necessary when evaluating healthcare AI models.
+* F1-Score is important because it balances Precision and Recall.
+* Deep learning models do not always outperform traditional machine learning models on small datasets.
+* ROC-AUC provides insight into a model's ability to distinguish between classes.
+* Model comparison helps select the most suitable baseline for future improvements.
+
+# Day 18 Progress
+
+## Topics Learned
+* Dropout Regularization
+* ReduceLROnPlateau Callback
+* Hyperparameter Tuning
+* Batch Size Optimization
+* Learning Rate Scheduling
+* Deep Learning Model Improvement
+## Files Added
+* best_config.json
+* results/mlp_tuning_results.csv
+## Experiments Performed
+### MLP Improvements
+* Added Dropout(0.3) after hidden layers
+* Added ReduceLROnPlateau callback
+* Tested multiple batch sizes:
+  * 32
+  * 64
+  * 128
+## Batch Size Comparison
+| Batch Size |Accuracy |
+| ---------- | -------- |
+| 32 | 0.7143 |
+| 64 | 0.7273 |
+| 128 | 0.7338 |
+## Best Configuration
+```json
+{
+    "batch_size": 128,
+    "accuracy": 0.7337662577629089
+}
+
+# Day 19 Progress
+
+## Topics Learned
+* Healthcare Research Paper Review
+* Adaptive Machine Learning
+* Diabetes Prediction
+* Research Pipeline Analysis
+* Research Gap Identification
+* Explainable AI (SHAP)
+## Files Added
+* paper/paper3_summary.md
+* paper/pipeline.drawio
+## Paper Reviewed
+**Machine Learning-Based Prediction Models for Type 2 Diabetes Using Clinical Data** *(Scientific Reports, 2021)*
+## Key Learnings
+* Studied a machine learning framework for early Type 2 Diabetes prediction.
+* Understood the complete workflow from data preprocessing to disease prediction.
+* Learned how multiple machine learning and deep learning models can be compared using standard evaluation metrics.
+* Explored the importance of feature selection and model evaluation in healthcare AI.
+* Learned that Explainable AI (SHAP) can improve the interpretability of model predictions.
+
+# Day 20 Progress
+
+## Topics Learned
+* Research Contribution
+* Research Novelty
+* Comparative Model Analysis
+* Healthcare AI Systems
+* Proactive Disease Detection
+
+## Key Learnings
+* Identified how our project differs from existing research.
+* Documented the novelty of combining traditional machine learning and deep learning models.
+* Understood the importance of systematic model comparison in healthcare AI.
+* Recognized the role of hyperparameter tuning in improving predictive performance.
+* Highlighted proactive disease detection as the project's primary objective.
