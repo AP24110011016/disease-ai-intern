@@ -1,0 +1,4 @@
+Configuration,Precision,Recall,F1
+Static MLP,0.6304,0.537,0.58
+Adaptive,0.617,0.537,0.5743
+Adaptive + Proactive,0.625,0.5556,0.5882

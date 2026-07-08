@@ -427,3 +427,84 @@ Input → Dense(64, ReLU) → Dense(32, ReLU) → Dense(1, Sigmoid)
 * Understood the importance of systematic model comparison in healthcare AI.
 * Recognized the role of hyperparameter tuning in improving predictive performance.
 * Highlighted proactive disease detection as the project's primary objective.
+
+# Day 21 Progress
+
+## Topics Learned
+* Adaptive Learning
+* Sliding Window Retraining
+* System Architecture
+* Proactive Disease Prediction
+
+## Files Updated
+* architecture.png
+* README.md
+
+## Key Findings
+* Chose Sliding Window Retraining as the adaptive mechanism.
+* Designed the complete system architecture.
+* Included data preprocessing, model training, adaptive retraining, prediction, and evaluation.
+
+# Day 22 Progress
+
+## Topics Learned
+* Adaptive MLP
+* Sliding Window Retraining
+* Sequential Batch Training
+
+## Files Updated
+* adaptive_mlp.py
+* results/adaptive_results.csv
+* README.md
+
+## Key Findings
+* Split the dataset into 10 sequential batches.
+* Retrained the MLP model as new batches were added.
+* Logged Accuracy, F1-Score, and Threshold after each retraining cycle.
+
+## Key Learnings
+* Adaptive retraining helps the model learn from newly available data.
+* Sequential batch training simulates real-world data updates.
+* Tracking evaluation metrics after each batch helps monitor model performance over time.
+
+# Day 24 Progress
+
+## Topics Learned
+* Ablation Study
+* Model Configuration Comparison
+* Performance Evaluation
+
+## Files Updated
+* ablation_study.py
+* results/ablation_results.csv
+* README.md
+
+## Key Findings
+* Compared Static MLP, Adaptive MLP, and the Full Adaptive + Proactive System on the same held-out test set.
+* Recorded Precision, Recall, and F1-Score for each configuration.
+* Evaluated the contribution of adaptive retraining and proactive prediction.
+
+## Key Learnings
+* Ablation studies help measure the impact of each component in a machine learning pipeline.
+* Using the same test set ensures a fair comparison between different model configurations.
+* F1-Score, Precision, and Recall provide a balanced evaluation for healthcare prediction models.
+
+# Day 25 Progress
+
+## Topics Learned
+* End-to-End System Demonstration
+* Adaptive Healthcare Pipeline
+* Proactive Risk Prediction
+* Model Evaluation
+
+## Key Findings
+* Demonstrated the complete disease prediction pipeline from raw data to alert generation.
+* Implemented adaptive retraining using sequential batches.
+* Added proactive prediction with rolling window features and threshold tuning.
+* Compared Static MLP, Adaptive MLP, and the Full System using Precision, Recall, and F1-Score.
+
+## Key Learnings
+* Adaptive learning helps models remain effective as new data becomes available.
+* Rolling window features capture recent trends in patient data.
+* Proactive prediction enables earlier identification of high-risk patients.
+* End-to-end evaluation confirms the contribution of each component to the overall system.

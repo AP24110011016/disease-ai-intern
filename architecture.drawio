@@ -1,0 +1,100 @@
+                   Adaptive Disease Prediction System
+
+┌───────────────────────┐
+│ Historical Dataset    │
+│ + New Incoming Data   │
+└──────────┬────────────┘
+           │
+           ▼
+┌───────────────────────┐
+│ Data Preprocessing    │
+│ • Missing Values      │
+│ • Encoding            │
+│ • Feature Scaling     │
+└──────────┬────────────┘
+           │
+           ▼
+┌───────────────────────┐
+│ Feature Engineering   │
+│ • Clinical Features   │
+│ • Lifestyle Features  │
+│ • Feature Selection   │
+└──────────┬────────────┘
+           │
+           ▼
+┌───────────────────────┐
+│ Initial MLP Training  │
+└──────────┬────────────┘
+           │
+           ▼
+┌───────────────────────┐
+│ Trained Model         │
+└──────────┬────────────┘
+           │
+           ▼
+──────────────────────────────────────────────
+ Sliding Window Retraining
+──────────────────────────────────────────────
+
+Batch 1
+   │
+   ▼
+Batch 2
+   │
+   ▼
+Batch 3
+   │
+   ▼
+...
+   │
+   ▼
+Batch N
+
+For every new batch:
+ • Add new batch
+ • Remove oldest batch
+ • Retrain model
+ • Update model
+
+           │
+           ▼
+┌──────────────────────────────┐
+│ Updated Model                │
+└──────────┬───────────────────┘
+           │
+           ▼
+┌──────────────────────────────┐
+│ Rolling Window Features      │
+│ Mean                         │
+│ Std                          │
+│ Trend                        │
+└──────────┬───────────────────┘
+           │
+           ▼
+┌──────────────────────────────┐
+│ Predict Risk (t+2)           │
+└──────────┬───────────────────┘
+           │
+           ▼
+┌──────────────────────────────┐
+│ Adaptive Threshold           │
+└──────────┬───────────────────┘
+           │
+           ▼
+┌──────────────────────────────┐
+│ Disease Prediction           │
+└──────────┬───────────────────┘
+           │
+           ▼
+┌──────────────────────────────┐
+│ Early Warning Alert          │
+└──────────┬───────────────────┘
+           │
+           ▼
+┌──────────────────────────────┐
+│ Evaluation                   │
+│ Accuracy                     │
+│ Precision                    │
+│ Recall                       │
+│ F1 Score                     │
+└──────────────────────────────┘

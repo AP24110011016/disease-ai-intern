@@ -1,0 +1,2 @@
+Batch,Train Samples,Test Samples,Accuracy,F1 Score,Threshold
+10,608,84,0.8095,0.7778,0.325
