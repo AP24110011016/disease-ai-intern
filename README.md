@@ -508,3 +508,76 @@ Input → Dense(64, ReLU) → Dense(32, ReLU) → Dense(1, Sigmoid)
 * Rolling window features capture recent trends in patient data.
 * Proactive prediction enables earlier identification of high-risk patients.
 * End-to-end evaluation confirms the contribution of each component to the overall system.
+
+
+# Chronic Kidney Disease (CKD) Prediction using Machine Learning
+
+## Overview
+
+This project implements multiple Machine Learning and Deep Learning models to predict Chronic Kidney Disease (CKD) using the UCI CKD dataset. The dataset was preprocessed by handling missing values, encoding categorical features, standardizing numerical features, and splitting the data into training and testing sets.
+
+## Dataset
+
+* **Dataset:** Chronic Kidney Disease Dataset
+* **Source:** UCI Machine Learning Repository
+* **Samples:** 400 (399 used after removing one malformed record)
+* **Features:** 24
+* **Target:** CKD / Not CKD
+
+## Preprocessing
+
+* Manual loading of ARFF dataset
+* Missing value handling using Median and Most Frequent Imputation
+* Label Encoding for categorical features
+* Standardization using StandardScaler
+* Train-Test Split (80:20)
+
+## Models Implemented
+
+* Logistic Regression
+* Decision Tree
+* Random Forest
+* Support Vector Machine (SVM)
+* Multi-Layer Perceptron (MLP)
+* Adaptive MLP
+
+## Performance Summary
+
+| Model                  | Accuracy | Precision |  Recall | F1 Score | ROC-AUC |
+| ---------------------- | -------: | --------: | ------: | -------: | ------: |
+| Logistic Regression    |   98.75% |    96.77% | 100.00% |   98.36% |  1.0000 |
+| Decision Tree          |   97.50% |   100.00% |  93.33% |   96.55% |  0.9667 |
+| Random Forest          |   97.50% |   100.00% |  93.33% |   96.55% |  0.9993 |
+| Support Vector Machine |  100.00% |   100.00% | 100.00% |  100.00% |  1.0000 |
+| Multi-Layer Perceptron |  100.00% |   100.00% | 100.00% |  100.00% |  1.0000 |
+| Adaptive MLP           |   98.75% |    96.77% | 100.00% |   98.36% |  1.0000 |
+
+## Project Structure
+
+```text
+data/
+├── chronic_kidney_disease_full.arff
+
+results/
+├── ckd_results.csv
+
+ckd_preprocessing.py
+ckd_logistic_regression.py
+ckd_decision_tree.py
+ckd_random_forest.py
+ckd_svm.py
+ckd_mlp.py
+ckd_adaptive_mlp.py
+ckd_compare_models.py
+```
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+
+## Outcome
+
+The implemented models achieved excellent predictive performance on the CKD dataset. SVM and MLP achieved perfect classification on the held-out test set, while the Adaptive MLP demonstrated adaptive training with dynamic architecture updates, providing an experimental framework for adaptive disease prediction research.
