@@ -1,5 +1,5 @@
 import numpy as np
-
+import pandas as pd
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import (
     accuracy_score,
@@ -104,3 +104,36 @@ print("Precision:",precision_score(y_test,pred))
 print("Recall   :",recall_score(y_test,pred))
 print("F1 Score :",f1_score(y_test,pred))
 print("ROC AUC  :",roc_auc_score(y_test,prob))
+
+# ---------------------------------------------------
+# Error Analysis
+# ---------------------------------------------------
+
+analysis = pd.DataFrame({
+    "Actual": y_test,
+    "Predicted": pred
+})
+
+false_negatives = analysis[
+    (analysis["Actual"] == 1) &
+    (analysis["Predicted"] == 0)
+]
+
+false_positives = analysis[
+    (analysis["Actual"] == 0) &
+    (analysis["Predicted"] == 1)
+]
+
+print("\n" + "="*60)
+print("ERROR ANALYSIS")
+print("="*60)
+
+print("\nFalse Negatives")
+print(false_negatives)
+
+print("\nTotal False Negatives:", len(false_negatives))
+
+print("\nFalse Positives")
+print(false_positives)
+
+print("\nTotal False Positives:", len(false_positives))
