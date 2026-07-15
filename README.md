@@ -509,7 +509,7 @@ Input → Dense(64, ReLU) → Dense(32, ReLU) → Dense(1, Sigmoid)
 * Proactive prediction enables earlier identification of high-risk patients.
 * End-to-end evaluation confirms the contribution of each component to the overall system.
 
-
+** About CKV **
 # Chronic Kidney Disease (CKD) Prediction using Machine Learning
 
 ## Overview
@@ -581,3 +581,51 @@ ckd_compare_models.py
 ## Outcome
 
 The implemented models achieved excellent predictive performance on the CKD dataset. SVM and MLP achieved perfect classification on the held-out test set, while the Adaptive MLP demonstrated adaptive training with dynamic architecture updates, providing an experimental framework for adaptive disease prediction research.
+
+# Day 26 Progress
+
+## Topics Learned
+* Cross-Dataset Generalization
+* Adaptive MLP Validation
+* Model Generalization in Healthcare AI
+
+## Files Updated
+* results/generalization_results.csv
+* paper/generalization.md
+* README.md
+
+## Key Findings
+* The Adaptive MLP maintained excellent performance on the CKD dataset.
+* The same preprocessing pipeline was successfully applied across different medical datasets.
+* High Accuracy, Precision, Recall, F1-Score, and ROC-AUC demonstrated strong model performance.
+* Cross-dataset evaluation confirmed the robustness of the proposed framework.
+
+## Key Learnings
+* Generalization testing is essential for validating machine learning models.
+* Evaluating a model on a different dataset reduces the risk of overfitting.
+* Consistent preprocessing improves model reliability across datasets.
+* Cross-dataset validation strengthens the credibility of healthcare AI research.
+
+# Day 27 Progress
+
+## Topics Learned
+* Error Analysis
+* False Positives and False Negatives
+* Model Limitations in Healthcare AI
+
+## Files Updated
+* ckd_adaptive_mlp.py
+* paper/error_analysis.md
+* README.md
+
+## Key Findings
+* The Adaptive MLP achieved a Recall of 100%, resulting in no false negative predictions.
+* Only one false positive was observed during evaluation.
+* The model achieved 98.75% Accuracy and a 98.36% F1-Score.
+* Error analysis highlighted the model's strong capability to detect CKD-positive patients.
+
+## Key Learnings
+* False negatives are the most critical errors in disease prediction.
+* Error analysis helps identify model strengths and limitations.
+* Precision and Recall provide deeper insights than Accuracy alone.
+* Documenting model limitations improves the quality and transparency of research.
