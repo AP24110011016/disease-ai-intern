@@ -1,6 +1,6 @@
 # Model Comp
 
-
+        
 | Algorithm                        |  Accuracy  |  Precision |   Recall   |  F1-Score  |   ROC-AUC  |
 | -------------------------------- | :--------: | :--------: | :--------: | :--------: | :--------: |
 | **Logistic Regression**          |   0.7078   |   0.6047   |   0.4815   |   0.5361   |   0.8067   |
