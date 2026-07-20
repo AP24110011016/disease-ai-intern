@@ -52,6 +52,9 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 y_prob = model.predict_proba(X_test)[:, 1]
 
+from sklearn.metrics import roc_curve
+
+fpr, tpr, _ = roc_curve(y_test, y_prob)
 # Metrics
 accuracy = accuracy_score(y_test, y_pred)
 precision = precision_score(y_test, y_pred)
@@ -77,3 +80,16 @@ results.to_csv("results/results_log.csv", index=False)
 
 print(results)
 print("\nResults saved to results/results_log.csv")
+
+import numpy as np
+import os
+
+os.makedirs("results/roc_data", exist_ok=True)
+
+np.savez(
+    "results/roc_data/logistic_regression_roc.npz",
+    fpr=fpr,
+    tpr=tpr
+)
+
+print("ROC data saved successfully.")

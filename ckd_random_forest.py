@@ -11,7 +11,7 @@ from sklearn.metrics import (
 )
 
 # Load data
-X_train, X_test, y_train, y_test = load_ckd_data()
+X_train, X_test, y_train, y_test, feature_names = load_ckd_data()
 
 # Create model
 model = RandomForestClassifier(

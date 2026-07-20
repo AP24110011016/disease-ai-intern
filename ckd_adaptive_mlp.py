@@ -1,12 +1,16 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+import os
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
     recall_score,
     f1_score,
-    roc_auc_score
+    roc_auc_score,
+    confusion_matrix,
+    ConfusionMatrixDisplay
 )
 
 from ckd_preprocessing import load_ckd_data
@@ -104,7 +108,7 @@ print("Precision:",precision_score(y_test,pred))
 print("Recall   :",recall_score(y_test,pred))
 print("F1 Score :",f1_score(y_test,pred))
 print("ROC AUC  :",roc_auc_score(y_test,prob))
-
+os.makedirs("figures", exist_ok=True)
 # ---------------------------------------------------
 # Error Analysis
 # ---------------------------------------------------
@@ -137,3 +141,35 @@ print("\nFalse Positives")
 print(false_positives)
 
 print("\nTotal False Positives:", len(false_positives))
+# ---------------------------------------------------
+# Confusion Matrix Figure
+# ---------------------------------------------------
+
+cm = confusion_matrix(y_test, pred)
+
+disp = ConfusionMatrixDisplay(
+    confusion_matrix=cm,
+    display_labels=["No CKD", "CKD"]
+)
+
+fig, ax = plt.subplots(figsize=(6, 6))
+
+disp.plot(
+    cmap="Blues",
+    ax=ax,
+    colorbar=False
+)
+
+plt.title("Adaptive MLP Confusion Matrix")
+
+plt.tight_layout()
+
+plt.savefig(
+    "figures/Figure2_Confusion_Matrix.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.show()
+
+print("\nConfusion Matrix saved to figures/Figure2_Confusion_Matrix.png")

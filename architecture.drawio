@@ -1,40 +1,42 @@
-                   Adaptive Disease Prediction System
+                    Adaptive Disease Prediction Framework
 
-┌───────────────────────┐
-│ Historical Dataset    │
-│ + New Incoming Data   │
-└──────────┬────────────┘
-           │
-           ▼
-┌───────────────────────┐
-│ Data Preprocessing    │
-│ • Missing Values      │
-│ • Encoding            │
-│ • Feature Scaling     │
-└──────────┬────────────┘
-           │
-           ▼
-┌───────────────────────┐
-│ Feature Engineering   │
-│ • Clinical Features   │
-│ • Lifestyle Features  │
-│ • Feature Selection   │
-└──────────┬────────────┘
-           │
-           ▼
-┌───────────────────────┐
-│ Initial MLP Training  │
-└──────────┬────────────┘
-           │
-           ▼
-┌───────────────────────┐
-│ Trained Model         │
-└──────────┬────────────┘
-           │
-           ▼
-──────────────────────────────────────────────
- Sliding Window Retraining
-──────────────────────────────────────────────
+┌──────────────────────────────┐
+│ Diabetes Dataset             │
+│ (Pima Indians Dataset)       │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│ Data Preprocessing           │
+│ • Missing Value Imputation   │
+│ • Min-Max Normalization      │
+│ • Train/Test Split           │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│ Feature Engineering          │
+│ • BMI Category               │
+│ • Age Group                  │
+│ • Glucose/Insulin Ratio      │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│ Initial Model Training       │
+│ LR • DT • RF • SVM • MLP     │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│ Adaptive MLP                 │
+│ Initial Training             │
+└──────────────┬───────────────┘
+               │
+               ▼
+══════════════════════════════════════════════
+        Incremental Adaptive Learning
+══════════════════════════════════════════════
 
 Batch 1
    │
@@ -50,51 +52,41 @@ Batch 3
    ▼
 Batch N
 
-For every new batch:
- • Add new batch
- • Remove oldest batch
- • Retrain model
- • Update model
+Each Batch:
+• Receive New Data
+• Retrain Adaptive MLP
+• Update Model Parameters
 
-           │
-           ▼
+               │
+               ▼
 ┌──────────────────────────────┐
-│ Updated Model                │
-└──────────┬───────────────────┘
-           │
-           ▼
+│ Updated Adaptive Model       │
+└──────────────┬───────────────┘
+               │
+               ▼
 ┌──────────────────────────────┐
-│ Rolling Window Features      │
-│ Mean                         │
-│ Std                          │
-│ Trend                        │
-└──────────┬───────────────────┘
-           │
-           ▼
-┌──────────────────────────────┐
-│ Predict Risk (t+2)           │
-└──────────┬───────────────────┘
-           │
-           ▼
-┌──────────────────────────────┐
-│ Adaptive Threshold           │
-└──────────┬───────────────────┘
-           │
-           ▼
+│ Proactive Detection Module   │
+│ • Rolling Statistics         │
+│ • Dynamic Threshold          │
+│ • Risk Assessment            │
+└──────────────┬───────────────┘
+               │
+               ▼
 ┌──────────────────────────────┐
 │ Disease Prediction           │
-└──────────┬───────────────────┘
-           │
-           ▼
+└──────────────┬───────────────┘
+               │
+               ▼
 ┌──────────────────────────────┐
 │ Early Warning Alert          │
-└──────────┬───────────────────┘
-           │
-           ▼
+└──────────────┬───────────────┘
+               │
+               ▼
 ┌──────────────────────────────┐
-│ Evaluation                   │
+│ Performance Evaluation       │
 │ Accuracy                     │
 │ Precision                    │
 │ Recall                       │
 │ F1 Score                     │
+│ ROC-AUC                      │
 └──────────────────────────────┘

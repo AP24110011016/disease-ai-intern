@@ -42,6 +42,10 @@ best_dt = grid.best_estimator_
 y_pred = best_dt.predict(X_test)
 y_prob = best_dt.predict_proba(X_test)[:, 1]
 
+from sklearn.metrics import roc_curve
+
+fpr, tpr, _ = roc_curve(y_test, y_prob)
+
 print("Predictions generated")
 
 from sklearn.metrics import (
@@ -117,3 +121,16 @@ else:
     )
 
 print("DT results logged successfully")
+
+import numpy as np
+import os
+
+os.makedirs("results/roc_data", exist_ok=True)
+
+np.savez(
+    "results/roc_data/decision_tree_roc.npz",
+    fpr=fpr,
+    tpr=tpr
+)
+
+print("Decision Tree ROC data saved successfully.")

@@ -39,6 +39,10 @@ y_pred = best_rf.predict(X_test)
 
 y_prob = best_rf.predict_proba(X_test)[:,1]
 
+from sklearn.metrics import roc_curve
+
+fpr, tpr, _ = roc_curve(y_test, y_prob)
+
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
@@ -106,3 +110,16 @@ existing.to_csv(
 )
 
 print("RF results logged")
+
+import numpy as np
+import os
+
+os.makedirs("results/roc_data", exist_ok=True)
+
+np.savez(
+    "results/roc_data/random_forest_roc.npz",
+    fpr=fpr,
+    tpr=tpr
+)
+
+print("Random Forest ROC data saved successfully.")

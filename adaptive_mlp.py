@@ -111,6 +111,10 @@ for i in range(1, len(batches)):
     threshold = 0.50
 
     predictions = (probabilities >= threshold).astype(int)
+    
+    from sklearn.metrics import roc_curve
+
+    fpr, tpr, _ = roc_curve(y_test, probabilities)
 
     # -----------------------------
     # Metrics
@@ -175,3 +179,15 @@ results_df.to_csv(
 
 print("\nAdaptive training completed!")
 print("Results saved to results/adaptive_results.csv")
+
+import numpy as np
+
+os.makedirs("results/roc_data", exist_ok=True)
+
+np.savez(
+    "results/roc_data/adaptive_mlp_roc.npz",
+    fpr=fpr,
+    tpr=tpr
+)
+
+print("Adaptive MLP ROC data saved successfully.")

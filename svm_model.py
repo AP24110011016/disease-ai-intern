@@ -58,6 +58,11 @@ best_svm = grid.best_estimator_
 y_pred = best_svm.predict(X_test)
 
 y_prob = best_svm.predict_proba(X_test)[:, 1]
+
+from sklearn.metrics import roc_curve
+
+fpr, tpr, _ = roc_curve(y_test, y_prob)
+
 accuracy = accuracy_score(y_test, y_pred)
 
 precision = precision_score(y_test, y_pred)
@@ -100,3 +105,16 @@ existing.to_csv(
 )
 
 print("SVM results logged")
+
+import numpy as np
+import os
+
+os.makedirs("results/roc_data", exist_ok=True)
+
+np.savez(
+    "results/roc_data/svm_roc.npz",
+    fpr=fpr,
+    tpr=tpr
+)
+
+print("SVM ROC data saved successfully.")
